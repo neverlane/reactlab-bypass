@@ -1,0 +1,50 @@
+{
+  "name": "reactlab-bypass",
+  "version": "1.0.0",
+  "description": "Modern ES6 Promise based bypasser for ReactLab AntiDDoS",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.js"
+    }
+  },
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build:without-tests": "tsup src/index.ts --format esm,cjs --dts",
+    "build": "npm run test && npm run build:without-tests",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\" }' mocha -r ts-node/register 'tests/**/*.ts'",
+    "docs": "typedoc --out docs src/index.ts --gitRevision master"
+  },
+  "homepage": "https://github.com/neverlane/reactlab-bypass",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/neverlane/reactlab-bypass.git"
+  },
+  "keywords": [
+    "reactlab",
+    "bypass",
+    "bypasser",
+    "modern",
+    "promise",
+    "typescript"
+  ],
+  "author": "neverlane",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "aes-js": "^3.1.2",
+    "undici": "^5.15.0"
+  },
+  "devDependencies": {
+    "@types/aes-js": "^3.1.1",
+    "@types/node": "^18.7.8",
+    "@typescript-eslint/eslint-plugin": "^5.42.0",
+    "@typescript-eslint/parser": "^5.42.0",
+    "eslint": "^8.27.0",
+    "mocha": "^10.2.0",
+    "ts-node": "^10.9.1",
+    "tsup": "^6.5.0",
+    "typedoc": "^0.23.10",
+    "typescript": "^4.7.4"
+  }
+}

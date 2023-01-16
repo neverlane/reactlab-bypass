@@ -1,0 +1,11 @@
+/src
+/tests
+/dev-scripts
+/.github
+/docs
+.eslintrc.json
+node_modules
+tsconfig.json
+pnpm-lock.yaml
+yarn.lock
+package-lock.json
