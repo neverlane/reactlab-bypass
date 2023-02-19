@@ -1,6 +1,6 @@
 {
   "name": "reactlab-bypass",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Modern ES6 Promise based bypasser for ReactLab AntiDDoS",
   "main": "./dist/index.js",
   "exports": {

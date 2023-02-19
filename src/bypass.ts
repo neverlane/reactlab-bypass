@@ -1,4 +1,5 @@
-import { ModeOfOperation as AesModes, utils as AesUtils } from 'aes-js';
+import AESJS from 'aes-js';
+const { ModeOfOperation: AesModes, utils: AesUtils } = AESJS;
 import undici from 'undici';
 import { ReactLabBypassError } from './errors';
 
